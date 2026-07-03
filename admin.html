@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOLOOK Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <header class="admin-hero">
+        <div>
+          <p class="admin-kicker">YOLOOK ADMIN</p>
+          <h1 class="admin-title">Админка каталога и главного слайдера</h1>
+          <p class="admin-subtitle">
+            Редактирует каталог и слайды через GitHub API. После коммита GitHub Actions может автоматически
+            заливать сайт на FTP-хостинг.
+          </p>
+        </div>
+        <div class="admin-hero-actions">
+          <a class="admin-link-button" href="./index.html" target="_blank" rel="noreferrer">Открыть сайт</a>
+          <a class="admin-link-button admin-link-button-muted" href="./ADMIN-SETUP.md" target="_blank" rel="noreferrer">Инструкция</a>
+        </div>
+      </header>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <h2 class="admin-section-title">Подключение к GitHub</h2>
+          <p class="admin-section-text">
+            Для сохранения нужен Personal Access Token с правом записи в репозиторий. Пароль GitHub сюда не подходит.
+          </p>
+        </div>
+
+        <div class="admin-grid admin-grid-connection">
+          <label class="admin-field">
+            <span class="admin-label">Owner / организация</span>
+            <input class="admin-input" type="text" id="githubOwner" placeholder="например, Iryna011185" />
+          </label>
+
+          <label class="admin-field">
+            <span class="admin-label">Репозиторий</span>
+            <input class="admin-input" type="text" id="githubRepo" placeholder="например, yolook-site" />
+          </label>
+
+          <label class="admin-field">
+            <span class="admin-label">Ветка</span>
+            <input class="admin-input" type="text" id="githubBranch" placeholder="main" value="main" />
+          </label>
+
+          <label class="admin-field admin-field-full">
+            <span class="admin-label">GitHub token</span>
+            <input class="admin-input" type="password" id="githubToken" placeholder="ghp_... или github_pat_..." autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="admin-inline-actions">
+          <button class="admin-button admin-button-muted" type="button" id="saveRepoSettings">Запомнить owner / repo / branch</button>
+        </div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <h2 class="admin-section-title">Главный слайдер</h2>
+          <p class="admin-section-text">
+            Здесь редактируются заголовки и пути к изображениям для 4 слайдов на главной странице.
+          </p>
+        </div>
+        <div class="admin-slides" id="slidesEditor"></div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <h2 class="admin-section-title">Загрузка изображений в GitHub</h2>
+          <p class="admin-section-text">
+            Сначала можно загрузить новые фото в репозиторий, потом вставить их пути в слайдер или карточку товара.
+          </p>
+        </div>
+
+        <div class="admin-upload-list" id="assetUploads"></div>
+
+        <div class="admin-inline-actions">
+          <button class="admin-button admin-button-muted" type="button" id="addUploadRow">Добавить файл</button>
+        </div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <h2 class="admin-section-title">Каталог</h2>
+          <p class="admin-section-text">
+            Можно менять название, цену, категорию, основное фото, галерею и оба текста карточки/товара.
+          </p>
+        </div>
+
+        <div class="admin-inline-actions">
+          <button class="admin-button admin-button-muted" type="button" id="addProductButton">Добавить товар</button>
+        </div>
+
+        <div class="admin-products" id="productsEditor"></div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <h2 class="admin-section-title">Сохранение</h2>
+          <p class="admin-section-text">
+            Кнопка ниже коммитит `catalog-data.js`, `data/homepage-content.json` и все загруженные изображения в выбранный репозиторий.
+          </p>
+        </div>
+
+        <div class="admin-status" id="adminStatus">Готово к редактированию.</div>
+
+        <div class="admin-inline-actions">
+          <button class="admin-button" type="button" id="saveAllButton">Сохранить в GitHub</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./catalog-data.js?v=4"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

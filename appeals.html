@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Электронные обращения — YOLOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="legal-page-body">
+    <header class="site-header">
+      <a class="brand" href="./index.html">yolook</a>
+
+      <nav class="main-nav" id="siteNav" aria-label="Основная навигация" data-mobile-nav>
+        <a class="nav-link" href="./index.html#catalog-title">Сумки</a>
+        <a class="nav-link" href="./index.html#catalog-title">Аксессуары</a>
+        <a class="nav-link" href="./index.html#catalog-title">Новинки</a>
+        <a class="nav-link" href="./reviews.html">Отзывы</a>
+        <a class="nav-link" href="./public-offer.html">Как заказать</a>
+        <a class="nav-link" href="./payment.html">Оплата</a>
+        <a class="nav-link" href="./delivery.html">Доставка</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Действия пользователя">
+        <a class="icon-button social-button" href="https://www.instagram.com/your_look.by?igsh=M2xsNjQyODBsaDF1&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.5"></rect>
+            <circle cx="12" cy="12" r="3.7"></circle>
+            <circle cx="17.4" cy="6.7" r="0.8" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a class="icon-button social-button" href="https://t.me/your_look_by" target="_blank" rel="noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.2 4.8 18.3 18c-.2.9-.8 1.1-1.6.7l-4.2-3.1-2 1.9c-.2.2-.4.4-.8.4l.3-4.4 8.1-7.3c.4-.3-.1-.5-.5-.2l-10 6.3-4.3-1.4c-.9-.3-.9-.9.2-1.3l16.6-6.4c.8-.3 1.4.2 1.1 1.2Z"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button burger-button"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          data-mobile-nav-toggle
+        >
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+        </button>
+        <a class="icon-button cart-button" href="./cart.html" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.2h10l.9 10.6H6.1L7 8.2Z"></path>
+            <path d="M9.1 8.5V7.2C9.1 5.4 10.4 4 12 4s2.9 1.4 2.9 3.2v1.3"></path>
+            <path d="M9.4 11.4v1.4"></path>
+            <path d="M14.6 11.4v1.4"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="legal-main">
+      <section class="legal-shell">
+        <div class="legal-hero">
+          <span class="legal-kicker">Канал для покупателей</span>
+          <h1 class="legal-title">Электронные обращения</h1>
+          <div class="hero-accent legal-accent" aria-hidden="true">
+            <span class="accent-line accent-line-blue"></span>
+            <span class="accent-line accent-line-pink"></span>
+          </div>
+          <p class="legal-subtitle">
+            На этой странице покупатель может направить электронное обращение, вопрос, претензию или предложение. Для обращения по персональным данным используйте также контакт, указанный в <a href="./privacy-policy.html">политике конфиденциальности</a>.
+          </p>
+        </div>
+
+        <div class="legal-notice">
+          <h2 class="legal-notice-title">Как рассматриваются обращения</h2>
+          <p class="legal-notice-text">
+            После отправки обращение поступает продавцу в электронном виде. Укажите корректный телефон или e-mail для обратной связи. Сроки и порядок рассмотрения определяются законодательством Республики Беларусь.
+          </p>
+        </div>
+
+        <article class="legal-content">
+          <h2>Направить обращение</h2>
+          <p>
+            Поля, отмеченные по смыслу формы, необходимы для того, чтобы продавец мог идентифицировать ваше обращение и ответить вам. Если обращение связано с заказом, укажите номер заказа и дату покупки, если они вам известны.
+          </p>
+
+          <div class="appeal-status" data-appeal-status hidden></div>
+
+          <form class="appeal-form" action="./customer-appeal.php" method="post">
+            <div class="appeal-form-grid">
+              <label class="order-field">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7.4" r="3.1"></circle>
+                    <path d="M5 19c1.6-3.2 4.1-4.8 7-4.8S17.4 15.8 19 19"></path>
+                  </svg>
+                </span>
+                <input class="order-input" type="text" name="name" placeholder="Имя и фамилия" required />
+              </label>
+
+              <label class="order-field">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7.2 4.8h2.7l1.2 4-1.8 1.8a15.7 15.7 0 0 0 4.1 4.1l1.8-1.8 4 1.2v2.7c0 .8-.6 1.5-1.4 1.5-7 0-12.7-5.7-12.7-12.7 0-.8.6-1.5 1.4-1.5Z"></path>
+                  </svg>
+                </span>
+                <input class="order-input" type="text" name="reply_to" placeholder="Телефон или e-mail для ответа" required />
+              </label>
+
+              <label class="order-field">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="4.8" y="5.8" width="14.4" height="12.4" rx="1.6"></rect>
+                    <path d="M8 9.4h8"></path>
+                    <path d="M8 13h5.6"></path>
+                  </svg>
+                </span>
+                <input class="order-input" type="text" name="order_number" placeholder="Номер заказа, если есть" />
+              </label>
+
+              <label class="order-field">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 6.6h12a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2H9.6L6 21v-3H6a2 2 0 0 1-2-2V8.6a2 2 0 0 1 2-2Z"></path>
+                  </svg>
+                </span>
+                <input class="order-input" type="text" name="subject" placeholder="Тема обращения" required />
+              </label>
+
+              <label class="order-field order-field-full">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5.6 7.2h12.8"></path>
+                    <path d="M5.6 11.8h12.8"></path>
+                    <path d="M5.6 16.4h7.4"></path>
+                  </svg>
+                </span>
+                <select class="order-input" name="appeal_type" required>
+                  <option value="">Тип обращения</option>
+                  <option value="question">Вопрос</option>
+                  <option value="claim">Претензия</option>
+                  <option value="proposal">Предложение</option>
+                  <option value="other">Иное</option>
+                </select>
+              </label>
+
+              <label class="order-field order-field-textarea order-field-full">
+                <span class="order-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 6.4h12a2 2 0 0 1 2 2v7.2a2 2 0 0 1-2 2H10l-4 3v-5.2H6a2 2 0 0 1-2-2V8.4a2 2 0 0 1 2-2Z"></path>
+                    <path d="M9 10.2h6"></path>
+                    <path d="M9 13.4h4.2"></path>
+                  </svg>
+                </span>
+                <textarea class="order-input order-textarea" name="message" rows="5" maxlength="3000" placeholder="Текст обращения" required></textarea>
+              </label>
+            </div>
+
+            <label class="order-consent">
+              <input class="order-consent-input" type="checkbox" name="consent" required />
+              <span class="order-consent-box" aria-hidden="true"></span>
+              <span class="order-consent-text">Я согласен(а) на обработку персональных данных в объеме, необходимом для рассмотрения обращения</span>
+            </label>
+
+            <div class="order-form-actions">
+              <button class="order-submit-button" type="submit">
+                <span>ОТПРАВИТЬ ОБРАЩЕНИЕ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h16"></path>
+                  <path d="m13 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand-block">
+        <div class="footer-brand">YOLOOK</div>
+        <div class="footer-socials" aria-label="Социальные сети">
+          <a class="footer-social-link" href="https://www.instagram.com/your_look.by?igsh=M2xsNjQyODBsaDF1&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect>
+              <circle cx="12" cy="12" r="4.1"></circle>
+              <circle cx="17.4" cy="6.6" r="1"></circle>
+            </svg>
+          </a>
+          <a class="footer-social-link" href="https://t.me/your_look_by" target="_blank" rel="noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.4 4.7 17.8 18c-.2 1-.8 1.2-1.6.8l-4.3-3.2-2.1 2c-.2.2-.4.4-.8.4l.3-4.4 8-7.3c.3-.3-.1-.5-.6-.2l-10 6.3-4.3-1.3c-.9-.3-1-.9.2-1.4L19 3.5c.8-.3 1.6.2 1.4 1.2Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-column" aria-label="Магазин">
+        <h2 class="footer-title">МАГАЗИН</h2>
+        <a class="footer-link" href="./index.html#catalog-title">Женские сумки</a>
+        <a class="footer-link" href="./index.html#catalog-title">Новинки</a>
+        <a class="footer-link" href="./index.html#catalog-title">Аксессуары</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Помощь">
+        <h2 class="footer-title">ПОМОЩЬ</h2>
+        <a class="footer-link" href="./help.html">Помощь</a>
+        <a class="footer-link" href="./delivery-payment.html">Доставка и оплата</a>
+        <a class="footer-link" href="./returns-exchange.html">Возврат и обмен</a>
+        <a class="footer-link" href="./product-care.html">Уход за изделиями</a>
+        <a class="footer-link" href="./faq.html">Часто задаваемые вопросы</a>
+        <a class="footer-link" href="./public-offer.html">Публичная оферта</a>
+        <a class="footer-link" href="./privacy-policy.html">Политика конфиденциальности</a>
+      </nav>
+
+      <address class="footer-column footer-contacts">
+        <h2 class="footer-title">КОНТАКТЫ</h2>
+        <a class="footer-link" href="tel:+375296029510">+375296029510</a>
+        <a class="footer-link" href="mailto:Yolook.by@gmail.com">Yolook.by@gmail.com</a>
+        <p class="footer-link footer-city">РБ, Минская обл., г. Жодино</p>
+      </address>
+    </footer>
+
+    <script src="./header.js"></script>
+    <script>
+      (() => {
+        const statusNode = document.querySelector("[data-appeal-status]");
+
+        if (!statusNode) {
+          return;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get("status");
+
+        if (status === "success") {
+          statusNode.hidden = false;
+          statusNode.textContent = "Обращение отправлено. Мы получили его и свяжемся с вами по указанным контактам.";
+        } else if (status === "error") {
+          statusNode.hidden = false;
+          statusNode.classList.add("is-error");
+          statusNode.textContent = "Не удалось отправить обращение. Попробуйте еще раз позже или свяжитесь с нами по телефону.";
+        }
+      })();
+    </script>
+  </body>
+</html>

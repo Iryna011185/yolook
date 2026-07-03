@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yolook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">yolook</a>
+
+      <nav class="main-nav" id="siteNav" aria-label="Основная навигация" data-mobile-nav>
+        <a class="nav-link nav-link-active" href="./index.html#catalog-title">Сумки</a>
+        <a class="nav-link" href="./index.html#catalog-title">Аксессуары</a>
+        <a class="nav-link" href="./index.html#pod-zakaz">Под заказ</a>
+        <a class="nav-link" href="./reviews.html">Отзывы</a>
+        <a class="nav-link" href="./public-offer.html">Как заказать</a>
+        <a class="nav-link" href="./payment.html">Оплата</a>
+        <a class="nav-link" href="./delivery.html">Доставка</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Действия пользователя">
+        <a class="icon-button social-button" href="https://www.instagram.com/your_look.by?igsh=M2xsNjQyODBsaDF1&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.5"></rect>
+            <circle cx="12" cy="12" r="3.7"></circle>
+            <circle cx="17.4" cy="6.7" r="0.8" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a class="icon-button social-button" href="https://t.me/your_look_by" target="_blank" rel="noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.2 4.8 18.3 18c-.2.9-.8 1.1-1.6.7l-4.2-3.1-2 1.9c-.2.2-.4.4-.8.4l.3-4.4 8.1-7.3c.4-.3-.1-.5-.5-.2l-10 6.3-4.3-1.4c-.9-.3-.9-.9.2-1.3l16.6-6.4c.8-.3 1.4.2 1.1 1.2Z"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button burger-button"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          data-mobile-nav-toggle
+        >
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+        </button>
+        <a class="icon-button cart-button" href="./cart.html" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.2h10l.9 10.6H6.1L7 8.2Z"></path>
+            <path d="M9.1 8.5V7.2C9.1 5.4 10.4 4 12 4s2.9 1.4 2.9 3.2v1.3"></path>
+            <path d="M9.4 11.4v1.4"></path>
+            <path d="M14.6 11.4v1.4"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-slider" aria-label="Главный слайдер">
+        <div class="hero-stage">
+          <article class="hero-slide is-active" data-slide>
+            <div
+              class="hero-media hero-media-1"
+              style="background-image: url('./assets/slider/brand-slide-1.avif')"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-panel">
+              <div class="hero-copy">
+                <h1 class="hero-title">НОВИНКИ</h1>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide>
+            <div
+              class="hero-media hero-media-2"
+              style="background-image: url('./assets/slider/brand-slide-2.avif')"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-panel">
+              <div class="hero-copy">
+                <h2 class="hero-title">НОВИНКИ</h2>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide>
+            <div
+              class="hero-media hero-media-3"
+              style="background-image: url('./assets/slider/brand-slide-3.png')"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-panel">
+              <div class="hero-copy">
+                <h2 class="hero-title">НОВИНКИ</h2>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide>
+            <div
+              class="hero-media hero-media-4"
+              style="background-image: url('./assets/slider/brand-slide-4.jpg')"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-panel">
+              <div class="hero-copy">
+                <h2 class="hero-title">НОВИНКИ</h2>
+              </div>
+            </div>
+          </article>
+
+          <div class="hero-pagination" aria-label="Навигация по слайдам">
+            <button class="hero-dot is-active" type="button" data-slide-button="0" aria-label="Слайд 1">
+              01
+            </button>
+            <button class="hero-dot" type="button" data-slide-button="1" aria-label="Слайд 2">
+              02
+            </button>
+            <button class="hero-dot" type="button" data-slide-button="2" aria-label="Слайд 3">
+              03
+            </button>
+            <button class="hero-dot" type="button" data-slide-button="3" aria-label="Слайд 4">
+              04
+            </button>
+            <span class="hero-progress" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" aria-labelledby="catalog-title">
+        <h2 class="catalog-visually-hidden" id="catalog-title">Каталог сумок</h2>
+
+        <div class="catalog-categories catalog-categories-compact">
+          <button class="category-tile is-active" type="button" data-category-key="new" aria-pressed="true">
+            <div class="category-copy">
+              <span class="category-name">НОВИНКИ</span>
+              <span class="category-arrow" aria-hidden="true">→</span>
+            </div>
+            <div class="category-media" aria-hidden="true">
+              <img class="category-image category-image-new" src="./assets/catalog/custom/taupe-baguette-studio.png" alt="" />
+            </div>
+          </button>
+
+          <button class="category-tile" type="button" data-category-key="all" aria-pressed="false">
+            <div class="category-copy">
+              <span class="category-name">ВСЕ</span>
+              <span class="category-arrow" aria-hidden="true">→</span>
+            </div>
+            <div class="category-media" aria-hidden="true">
+              <img class="category-image category-image-new" src="./assets/catalog/custom/choco-shopper-look.png" alt="" />
+            </div>
+          </button>
+
+          <button class="category-tile" type="button" data-category-key="order" aria-pressed="false" id="pod-zakaz">
+            <div class="category-copy">
+              <span class="category-name">ПОД ЗАКАЗ</span>
+              <span class="category-arrow" aria-hidden="true">→</span>
+            </div>
+            <div class="category-media" aria-hidden="true">
+              <img class="category-image category-image-new" src="./assets/catalog/custom/made-to-order/open-weave-tote/cream.jpg" alt="" />
+            </div>
+          </button>
+
+          <button class="category-tile category-tile-favorites" type="button" data-category-key="favorites" aria-pressed="false">
+            <div class="category-copy">
+              <span class="category-name">ИЗБРАННОЕ</span>
+              <span class="category-arrow" aria-hidden="true">→</span>
+            </div>
+            <div class="category-media category-media-icon" aria-hidden="true">
+              <svg class="category-heart-icon" viewBox="0 0 24 24">
+                <path d="M12 20.4 4.9 13.8a4.7 4.7 0 0 1 6.6-6.7L12 7.6l.5-.5a4.7 4.7 0 0 1 6.6 6.7Z"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="catalog-grid">
+          <aside class="catalog-lead">
+            <div class="catalog-lead-copy">
+              <span class="catalog-eyebrow" data-catalog-current>НОВИНКИ<br />4 МОДЕЛИ</span>
+              <span class="catalog-lead-line" aria-hidden="true"></span>
+            </div>
+            <p class="catalog-lead-note" data-catalog-note>Подборка актуальных моделей, которые сейчас доступны к заказу.</p>
+          </aside>
+
+          <div class="catalog-products-shell" data-catalog-cards-root></div>
+
+          <aside class="brand-panel">
+            <div class="brand-panel-mark">YOLOOK</div>
+            <div class="hero-accent brand-panel-accent" aria-hidden="true">
+              <span class="accent-line accent-line-blue"></span>
+              <span class="accent-line accent-line-pink"></span>
+            </div>
+            <h3 class="brand-panel-title">ПОЧЕМУ<br />ВЫБИРАЮТ НАС</h3>
+            <p class="brand-panel-text">
+              Актуальные модели, быстрая доставка по Беларуси, удобная оплата и
+              внимательный сервис. Мы помогаем выбрать сумку, которая будет радовать
+              каждый день.
+            </p>
+            <a class="brand-panel-link" href="#">
+              <span>Подробнее о бренде</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="benefits-strip" aria-label="Преимущества магазина">
+        <article class="benefit-item">
+          <div class="benefit-icon benefit-icon-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="6" width="10" height="10" rx="1.8"></rect>
+              <path d="M13 9h3.2l2.8 3.1V16H13"></path>
+              <circle cx="8" cy="18" r="1.9"></circle>
+              <circle cx="17" cy="18" r="1.9"></circle>
+            </svg>
+          </div>
+          <div class="benefit-copy">
+            <h2 class="benefit-title">Доставка по всей Беларуси</h2>
+            <p class="benefit-text">Быстро и надежно</p>
+          </div>
+        </article>
+
+        <span class="benefit-divider" aria-hidden="true"></span>
+
+        <article class="benefit-item">
+          <div class="benefit-icon benefit-icon-pink" aria-hidden="true">
+            <svg viewBox="0 0 28 28">
+              <path transform="translate(2 2)" d="M12 3.8c1.2 0 1.8 1.4 2.8 1.8 1 .4 2.4-.3 3.3.4.9.7.7 2.2 1.4 3.1.7.9 2.2 1.2 2.4 2.3.2 1.1-.9 2.2-.9 3.4s1.1 2.3.9 3.4c-.2 1.1-1.7 1.4-2.4 2.3-.7.9-.5 2.4-1.4 3.1-.9.7-2.3 0-3.3.4-1 .4-1.6 1.8-2.8 1.8s-1.8-1.4-2.8-1.8c-1-.4-2.4.3-3.3-.4-.9-.7-.7-2.2-1.4-3.1-.7-.9-2.2-1.2-2.4-2.3-.2-1.1.9-2.2.9-3.4s-1.1-2.3-.9-3.4c.2-1.1 1.7-1.4 2.4-2.3.7-.9.5-2.4 1.4-3.1.9-.7 2.3 0 3.3-.4 1-.4 1.6-1.8 2.8-1.8Z"></path>
+            </svg>
+          </div>
+          <div class="benefit-copy">
+            <h2 class="benefit-title">Премиальные материалы</h2>
+            <p class="benefit-text">Отборная кожа и фурнитура</p>
+          </div>
+        </article>
+
+        <span class="benefit-divider" aria-hidden="true"></span>
+
+        <article class="benefit-item">
+          <div class="benefit-icon benefit-icon-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 18.5 5.6V11c0 4.2-2.7 7.7-6.5 9-3.8-1.3-6.5-4.8-6.5-9V5.6Z"></path>
+              <path d="m8.9 11.9 2.1 2.2 4.1-4.4"></path>
+            </svg>
+          </div>
+          <div class="benefit-copy">
+            <h2 class="benefit-title">Гарантия качества</h2>
+            <p class="benefit-text">Мы уверены в каждой детали</p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand-block">
+        <div class="footer-brand">YOLOOK</div>
+        <div class="footer-socials" aria-label="Социальные сети">
+          <a class="footer-social-link" href="https://www.instagram.com/your_look.by?igsh=M2xsNjQyODBsaDF1&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect>
+              <circle cx="12" cy="12" r="4.1"></circle>
+              <circle cx="17.4" cy="6.6" r="1"></circle>
+            </svg>
+          </a>
+          <a class="footer-social-link" href="https://t.me/your_look_by" target="_blank" rel="noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.4 4.7 17.8 18c-.2 1-.8 1.2-1.6.8l-4.3-3.2-2.1 2c-.2.2-.4.4-.8.4l.3-4.4 8-7.3c.3-.3-.1-.5-.6-.2l-10 6.3-4.3-1.3c-.9-.3-1-.9.2-1.4L19 3.5c.8-.3 1.6.2 1.4 1.2Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-column" aria-label="Магазин">
+        <h2 class="footer-title">МАГАЗИН</h2>
+        <a class="footer-link" href="./index.html#catalog-title">Женские сумки</a>
+        <a class="footer-link" href="./index.html#pod-zakaz">Под заказ</a>
+        <a class="footer-link" href="./index.html#catalog-title">Аксессуары</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Помощь">
+        <h2 class="footer-title">ПОМОЩЬ</h2>
+        <a class="footer-link" href="./help.html">Помощь</a>
+        <a class="footer-link" href="./delivery-payment.html">Доставка и оплата</a>
+        <a class="footer-link" href="./returns-exchange.html">Возврат и обмен</a>
+        <a class="footer-link" href="./product-care.html">Уход за изделиями</a>
+        <a class="footer-link" href="./faq.html">Часто задаваемые вопросы</a>
+        <a class="footer-link" href="./public-offer.html">Публичная оферта</a>
+        <a class="footer-link" href="./privacy-policy.html">Политика конфиденциальности</a>
+      </nav>
+
+      <address class="footer-column footer-contacts">
+        <h2 class="footer-title">КОНТАКТЫ</h2>
+        <a class="footer-link" href="tel:+375296029510">+375296029510</a>
+        <a class="footer-link" href="mailto:Yolook.by@gmail.com">Yolook.by@gmail.com</a>
+        <p class="footer-link footer-city">РБ, Минская обл., г. Жодино</p>
+      </address>
+    </footer>
+    <script src="./header.js"></script>
+    <script src="./homepage-content.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./catalog-data.js?v=4"></script>
+    <script src="./favorites.js"></script>
+    <script src="./catalog-switcher.js?v=2"></script>
+  </body>
+</html>

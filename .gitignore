@@ -1,0 +1,7 @@
+.env
+.DS_Store
+*.zip
+data/orders/*.json
+data/index/*.txt
+data/logs/**/*.json
+data/logs/**/*.log

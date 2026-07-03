@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оплата получена — YOLOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body class="checkout-page">
+    <main class="order-modal checkout-main">
+      <section class="order-modal-dialog checkout-dialog" aria-labelledby="paymentSuccessTitle">
+        <a class="order-modal-close" href="../../index.html" aria-label="На главную">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14"></path>
+            <path d="M19 5 5 19"></path>
+          </svg>
+        </a>
+
+        <div class="order-modal-shell">
+          <a class="order-modal-brand" href="../../index.html">YOLOOK</a>
+          <div class="hero-accent order-modal-accent" aria-hidden="true">
+            <span class="accent-line accent-line-blue"></span>
+            <span class="accent-line accent-line-pink"></span>
+          </div>
+
+          <p class="order-modal-product-line">
+            <span class="order-modal-product-name">EXPRESS PAY</span>
+            <span class="order-modal-product-price">YOLOOK</span>
+          </p>
+
+          <h1 class="order-modal-title" id="paymentSuccessTitle">ПРОВЕРЯЕМ ОПЛАТУ</h1>
+          <p class="order-modal-description" data-payment-return-message>
+            Мы получили возврат от платёжной страницы. После подтверждения оплаты мы свяжемся с вами, чтобы подтвердить заказ и уточнить отправку.
+          </p>
+
+          <div class="delivery-policy">
+            <span class="delivery-policy-label">Статус заказа</span>
+            <strong class="delivery-policy-value" data-payment-return-status>Ожидаем подтверждение</strong>
+          </div>
+
+          <p class="order-form-status" data-payment-return-error aria-live="polite"></p>
+
+          <div class="order-form-actions">
+            <a class="order-submit-button" href="../../index.html"><span>НА ГЛАВНУЮ</span></a>
+            <a class="order-cancel-button checkout-back-link" href="../../cart.html">В корзину</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../payment-return.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "heroSlides": [
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-1.avif"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-2.avif"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-3.png"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина — YOLOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="cart-page">
+    <header class="site-header">
+      <a class="brand" href="./index.html">yolook</a>
+
+      <nav class="main-nav" id="siteNav" aria-label="Основная навигация" data-mobile-nav>
+        <a class="nav-link nav-link-active" href="./index.html#catalog-title">Сумки</a>
+        <a class="nav-link" href="./index.html#catalog-title">Аксессуары</a>
+        <a class="nav-link" href="./index.html#catalog-title">Новинки</a>
+        <a class="nav-link" href="./reviews.html">Отзывы</a>
+        <a class="nav-link" href="./public-offer.html">Как заказать</a>
+        <a class="nav-link" href="./payment.html">Оплата</a>
+        <a class="nav-link" href="./delivery.html">Доставка</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Действия пользователя">
+        <a class="icon-button social-button" href="https://www.instagram.com/your_look.by?igsh=M2xsNjQyODBsaDF1&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.5"></rect>
+            <circle cx="12" cy="12" r="3.7"></circle>
+            <circle cx="17.4" cy="6.7" r="0.8" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a class="icon-button social-button" href="https://t.me/your_look_by" target="_blank" rel="noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.2 4.8 18.3 18c-.2.9-.8 1.1-1.6.7l-4.2-3.1-2 1.9c-.2.2-.4.4-.8.4l.3-4.4 8.1-7.3c.4-.3-.1-.5-.5-.2l-10 6.3-4.3-1.4c-.9-.3-.9-.9.2-1.3l16.6-6.4c.8-.3 1.4.2 1.1 1.2Z"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button burger-button"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          data-mobile-nav-toggle
+        >
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+          <span class="burger-button-line"></span>
+        </button>
+        <a class="icon-button cart-button" href="./cart.html" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8.2h10l.9 10.6H6.1L7 8.2Z"></path>
+            <path d="M9.1 8.5V7.2C9.1 5.4 10.4 4 12 4s2.9 1.4 2.9 3.2v1.3"></path>
+            <path d="M9.4 11.4v1.4"></path>
+            <path d="M14.6 11.4v1.4"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="cart-page-main">
+      <section class="cart-page-shell">
+        <nav class="cart-breadcrumbs" aria-label="Хлебные крошки">
+          <a href="./index.html">Главная</a>
+          <span>›</span>
+          <span>Корзина</span>
+        </nav>
+
+        <h1 class="cart-page-title">КОРЗИНА</h1>
+
+        <div class="hero-accent cart-page-accent" aria-hidden="true">
+          <span class="accent-line accent-line-blue"></span>
+          <span class="accent-line accent-line-pink"></span>
+        </div>
+
+        <div class="cart-layout">
+          <section class="cart-items" aria-label="Товары в корзине">
+            <div data-cart-items-root></div>
+
+            <div class="cart-empty" data-cart-empty hidden>
+              <h2 class="cart-empty-title">Корзина пуста</h2>
+              <p class="cart-empty-text">Добавьте модели в корзину, и здесь появится ваш заказ.</p>
+              <a class="cart-empty-link" href="./index.html">Вернуться к покупкам</a>
+            </div>
+          </section>
+
+          <aside class="cart-summary">
+            <h2 class="cart-summary-title">ВАШ ЗАКАЗ</h2>
+
+            <div class="hero-accent cart-summary-accent" aria-hidden="true">
+              <span class="accent-line accent-line-blue"></span>
+              <span class="accent-line accent-line-pink"></span>
+            </div>
+
+            <div class="cart-summary-row">
+              <span data-cart-summary-count>Товары (0)</span>
+              <strong data-cart-summary-subtotal>0 BYN</strong>
+            </div>
+
+            <div class="cart-summary-row cart-summary-row-discount" data-cart-discount-row hidden>
+              <span>Скидка</span>
+              <strong data-cart-summary-discount>0 BYN</strong>
+            </div>
+
+            <div class="cart-summary-divider"></div>
+
+            <div class="cart-summary-row cart-summary-row-total">
+              <div>
+                <span>Итого</span>
+                <p>С учётом НДС</p>
+              </div>
+              <strong data-cart-summary-total>0 BYN</strong>
+            </div>
+
+            <div class="cart-promo">
+              <label class="cart-promo-label" for="promoCode">Промокод</label>
+              <div class="cart-promo-form">
+                <input class="cart-promo-input" id="promoCode" type="text" placeholder="Введите промокод" />
+                <button class="cart-promo-button" type="button" data-cart-apply-promo>Применить</button>
+              </div>
+              <p class="cart-promo-status" data-cart-promo-status aria-live="polite"></p>
+            </div>
+
+            <a
+              class="cart-submit-button is-disabled"
+              href="./checkout.html"
+              data-cart-checkout
+            >
+              <span>ОФОРМИТЬ ЗАКАЗ</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 12h16"></path>
+                <path d="m13 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="./header.js"></script>
+    <script src="./catalog-data.js?v=4"></script>
+    <script src="./cart.js?v=7"></script>
+  </body>
+</html>

@@ -1,4 +1,25 @@
 (() => {
+  const homepageContent = {
+  "heroSlides": [
+    {
+      "title": "ПОД ЗАКАЗ",
+      "image": "./assets/slider/brand-slide-1.avif"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-2.avif"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-3.png"
+    },
+    {
+      "title": "НОВИНКИ",
+      "image": "./assets/slider/brand-slide-4.jpg"
+    }
+  ]
+};
+
   const applySlides = (slides) => {
     if (!Array.isArray(slides) || slides.length === 0) {
       return;
@@ -26,28 +47,11 @@
     });
   };
 
-  const loadHomepageContent = async () => {
-    try {
-      const response = await window.fetch("./data/homepage-content.json", {
-        cache: "no-store",
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to load homepage content: ${response.status}`);
-      }
-
-      const homepageContent = await response.json();
-      window.YOLOOK_HOMEPAGE_CONTENT = homepageContent;
-      applySlides(homepageContent.heroSlides);
-      window.dispatchEvent(
-        new CustomEvent("yolook:homepagecontentready", {
-          detail: homepageContent,
-        })
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  loadHomepageContent();
+  window.YOLOOK_HOMEPAGE_CONTENT = homepageContent;
+  applySlides(homepageContent.heroSlides);
+  window.dispatchEvent(
+    new CustomEvent("yolook:homepagecontentready", {
+      detail: homepageContent,
+    })
+  );
 })();

@@ -2,8 +2,8 @@
   const homepageContent = {
   "heroSlides": [
     {
-      "title": "ПОД ЗАКАЗ",
-      "image": "./assets/slider/brand-slide-1.avif"
+      "title": "В наличии",
+      "image": "assets/admin-uploads/slides/img-8359-1784538273449.jpeg"
     },
     {
       "title": "НОВИНКИ",

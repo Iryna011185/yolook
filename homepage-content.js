@@ -2,20 +2,20 @@
   const homepageContent = {
   "heroSlides": [
     {
-      "title": "В наличии",
+      "title": "НОВИНКИ",
       "image": "assets/admin-uploads/slides/img-8359-1784538273449.jpeg"
     },
     {
       "title": "НОВИНКИ",
-      "image": "./assets/slider/brand-slide-2.avif"
+      "image": "assets/admin-uploads/slides/img-8360-1784538751297.jpeg"
     },
     {
       "title": "НОВИНКИ",
-      "image": "./assets/slider/brand-slide-3.png"
+      "image": "assets/admin-uploads/slides/img-8361-1784538762744.jpeg"
     },
     {
       "title": "НОВИНКИ",
-      "image": "./assets/slider/brand-slide-4.jpg"
+      "image": "assets/admin-uploads/slides/img-8362-1784538771037.jpeg"
     }
   ]
 };
